@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1b-w=o)f0&2#!zrvpg))s=cd9jxe(l7%%v!*(!n%^#ietb(-i0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['citeceventcountdown.herokuapp.com']
 
 
 # Application definition
