@@ -1,0 +1,16 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{% static 'countdown_website/style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid py-5">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
