@@ -1,0 +1,3 @@
+#!C:\Users\chunh\Documents\GitHub VS\citec_event_countdown\venv\Scripts\python.exe
+from winpython import controlpanel
+controlpanel.main()
