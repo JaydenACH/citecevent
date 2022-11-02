@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1b-w=o)f0&2#!zrvpg))s=cd9jxe(l7%%v!*(!n%^#ietb(-i0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['citeceventcountdown.herokuapp.com','127.0.0.1']
 CSRF_TRUSTED_ORIGINS = ['https://citeceventcountdown.herokuapp.com']
