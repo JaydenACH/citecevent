@@ -10,11 +10,12 @@
      <meta name="keywords" content="">
      <meta name="team" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-     <link rel="icon" href="/static/citec_logo.ico">
+     <link rel="icon" href="{% static 'countdown_website/images/citec_logo.ico' %}">
      <link rel="stylesheet" href="{% static 'countdown_website/css/bootstrap.min.css' %}">
      <link rel="stylesheet" href="{% static 'countdown_website/css/vegas.min.css' %}">
      <link rel="stylesheet" href="{% static 'countdown_website/css/font-awesome.min.css' %}">
      <link rel="stylesheet" href="{% static 'countdown_website/css/templatemo-style.css' %}">
+     <link rel="stylesheet" href="{% static 'countdown_website/css/styles.css' %}">
 </head>
 <body>
      <section class="preloader">
@@ -22,32 +23,11 @@
                <span class="spinner-rotate"></span>
           </div>
      </section>
-    <section class="grid">
-         <div class="container">
-            <div class="row">
-              <div class="col-md-2 col-sm-2">
-                <div class="grid-line"></div>
-              </div>
-              <div class="col-md-2 col-sm-2">
-                <div class="grid-line"></div>
-              </div>
-              <div class="col-md-2 col-sm-2">
-                <div class="grid-line"></div>
-              </div>
-              <div class="col-md-2 col-sm-2">
-                <div class="grid-line"></div>
-              </div>
-              <div class="col-md-2 col-sm-2">
-                <div class="grid-line"></div>
-              </div>
 
-            </div>
-         </div>
-    </section>
     <div class="menu-bg"></div>
     <div class="menu-burger">☰</div>
     <div class="menu-items">
-       <div class="container">
+       <div class="container" style="margin-top:50px;">
          <div class="row">
            <div class="col-md-offset-2 col-md-4 col-sm-6">
             <h1>More Info</h1>
@@ -60,9 +40,16 @@
            <div class="col-md-4 col-sm-6">
              <address>
                <h1>Event Location</h1>
-               <p>No. 1C (3rd Floor), Jalan Anggerik Vanilla X31/X Seksyen 31,<br>Kota Kemuning, 40460 Shah Alam, Selangor</p>
+               <p>Nexus Bangar South</p>
                <div class="google-map">
-                  <iframe src="https://maps.google.com/maps?q=rhb%20kota%20kemuning&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+                  <iframe src="https://maps.google.com/maps?q=nexus%20bangsar%20south&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+               </div>
+             </address>
+             <address>
+               <h1>Accomodation Location</h1>
+               <p>VE Hotel & Residence</p>
+               <div class="google-map">
+                  <iframe src="https://maps.google.com/maps?q=ve%20hotel%20&%20residence&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
                </div>
              </address>
            </div> 
@@ -70,10 +57,8 @@
            <div class="col-md-12 col-sm-12">
              <ul class="social-icon">
               <li class="line"></li>
-               <li><a href="https://fb.com/templatemo" class="fa fa-facebook"></a></li>
-               <li><a href="#" class="fa fa-twitter"></a></li>
-               <li><a href="https://plus.google.com/+templatemo" class="fa fa-google"></a></li>
-               <li><a href="#" class="fa fa-instagram"></a></li>
+               <li><a href="https://www.facebook.com/citec.international/" class="fa fa-facebook"></a></li>
+               <li><a href="https://www.linkedin.com/company/citec-international/mycompany/" class="fa fa-linkedin"></a></li>
              </ul>
            </div>
          </div>
@@ -85,10 +70,10 @@
         <div class="overlay"></div>
           <div class="container">
                <div class="row">
-
                     <div class="col-md-12 col-sm-12">
                          <div class="home-info">
-                              <h1>We are getting ready <br>to launch new product!</h1>
+                              <h1 id="h1-header">CITEC Malaysia are excited to welcome you!</h1>
+                              <h1>See you soon!</h1>
                               <!-- You can change the date time in init.js file -->
                               <ul class="countdown">
                                    <li>
@@ -108,10 +93,21 @@
                                         <h3>seconds</h3>
                                    </li>     
                               </ul>
+                              <div class="div-imagehomapge">
+                                   <img class="image-homepage" src="{% static 'countdown_website/images/invitation.png' %}" alt="invitation">
+                                   <img class="image-homepage" src="{% static 'countdown_website/images/agenda.png' %}" alt="invitation">
+                              </div>
+                              <h2>Sign up your email for any updates from us.</h2>
                               <div class="subscribe-form">
-                                <form action="" method="get">
-                                  <input type="email" name="email" class="form-control" placeholder="Enter your email" required="">
-                                  <button type="submit" class="form-control"><i class="fa fa-envelope-o"></i></button>
+                                <form action="/recordemail" method="POST">
+                                   {% csrf_token %}
+                                   <input type="text" name="reg_name" class="form-control" placeholder="Enter your name">
+                                   <br>
+                                   <input type="email" name="email" class="form-control" placeholder="Enter your email">
+                                   <br>
+                                   <input type="text" name="reg_com" class="form-control" placeholder="Enter your company">
+                                   <br>
+                                   <button type="submit" class="form-submit">Send</button>
                                 </form>
                               </div>
                          </div>

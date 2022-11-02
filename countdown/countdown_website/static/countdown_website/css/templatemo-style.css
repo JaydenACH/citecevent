@@ -87,7 +87,7 @@ https://templatemo.com/tm-521-get-ready
   }
 
   .overlay {
-    background: linear-gradient(to top right, #d2b48c, #000000);
+    background: linear-gradient(to top right, #DFBF51, #000000);
     opacity: 0.9;
     position: absolute;
     top: 0;
@@ -106,7 +106,7 @@ https://templatemo.com/tm-521-get-ready
   }
 
   .grid-line {
-    height: 300vh;
+    height: 100vh;
     border-right: 1px solid rgba(255,255,255,0.02);
   }
 
@@ -117,6 +117,7 @@ https://templatemo.com/tm-521-get-ready
 
   .subscribe-form {
     position: relative;
+    margin-bottom: 25px;
   }
 
   .subscribe-form .form-control {
@@ -129,7 +130,7 @@ https://templatemo.com/tm-521-get-ready
     padding: 6px 30px;
   }
 
-  .subscribe-form button[type="submit"] {
+  .subscribe-form button[type="submidt"] {
     background: transparent;
     border: 0;
     outline: none;
@@ -224,8 +225,8 @@ https://templatemo.com/tm-521-get-ready
 
   .menu-bg.fs {
     transform: translate3d(50%, -50%, 0);
-    width: 500vw;
-    height: 500vw;
+    width: 500vh;
+    height: 350vh;
   }
 
   .menu-burger {
@@ -345,12 +346,12 @@ https://templatemo.com/tm-521-get-ready
     position: relative;
     z-index: 2;
     width: 100%;
-    height: 100vh;
+    height: 80%;
   }
   
   .countdown {
     text-align: center;
-    margin: 50px 0;
+    margin: 15px 0;
     padding: 0;
   }
 
@@ -426,6 +427,7 @@ https://templatemo.com/tm-521-get-ready
 
     .home-info {
       padding: 0 1em 0 1em;
+      height: 85%;
     }
 
     .countdown li {
