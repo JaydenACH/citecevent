@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Emails
 from datetime import datetime
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 
 
 def index(request):
@@ -20,4 +22,4 @@ def recordemail(request):
         reg_com=reg_com,
     )
     email_log.save()
-    return render(request, "countdown_website/homepage.html")
+    return HttpResponseRedirect(reverse("index"))
